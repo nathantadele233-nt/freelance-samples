@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maya Business and Finance Consultancy</title>
+    <link rel="icon" href="maya.jpg" type="image/png">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#ADFF29", secondary: "#8B4513" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Poppins', sans-serif;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+      input[type="number"] {
+      -moz-appearance: textfield;
+      }
+      .custom-checkbox {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      }
+      .custom-checkbox input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 2px solid #ADFF29;
+      border-radius: 4px;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+      background-color: #ADFF29;
+      }
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+      display: block;
+      }
+      .custom-checkbox .checkmark:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+      .custom-radio {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      }
+      .custom-radio input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+      .radio-mark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 2px solid #ADFF29;
+      border-radius: 50%;
+      }
+      .custom-radio input:checked ~ .radio-mark {
+      background-color: #fff;
+      }
+      .radio-mark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      .custom-radio input:checked ~ .radio-mark:after {
+      display: block;
+      }
+      .custom-radio .radio-mark:after {
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ADFF29;
+      }
+      .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 24px;
+      }
+      .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+      .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+      }
+      .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      }
+      input:checked + .slider {
+      background-color: #ADFF29;
+      }
+      input:checked + .slider:before {
+      transform: translateX(24px);
+      }
+      .custom-range {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 5px;
+      background: #e5e7eb;
+      outline: none;
+      }
+      .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ADFF29;
+      cursor: pointer;
+      }
+      .custom-range::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ADFF29;
+      cursor: pointer;
+      border: none;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <h1 class="text-3xl font-['Pacifico'] text-[#8B4513] mr-2">MAYA</h1>
+          <span class="text-sm font-medium text-gray-700"
+            >Business & Finance Consultancy</span
+          >
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="nav-link text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-800 hover:text-primary font-medium transition duration-300"
+            >About Us</a
+          >
+          <a
+            href="#services"
+            class="nav-link text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Services</a
+          >
+          <a
+            href="#goals"
+            class="nav-link text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Goals</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Contact</a
+          >
+          <a
+            href="#booking-form"
+            class="nav-link text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Book a Consultancy</a
+          >
+        </nav>
+        <div
+          class="md:hidden w-8 h-8 flex items-center justify-center"
+          id="mobile-menu-button"
+        >
+          <i class="ri-menu-line ri-2x text-gray-800"></i>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col space-y-4">
+          <a
+            href="#home"
+            class="text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-800 hover:text-primary font-medium transition duration-300"
+            >About Us</a
+          >
+          <a
+            href="#services"
+            class="text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Services</a
+          >
+          <a
+            href="#goals"
+            class="text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Goals</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-800 hover:text-primary font-medium transition duration-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-24 relative"
+      style="background-image: url('https://readdy.ai/api/search-image?query=professional%20business%20finance%20consulting%20office%20environment%20with%20natural%20light%2C%20modern%20interior%20design%2C%20clean%20workspace%20with%20gold%20and%20green%20accents%2C%20plants%2C%20business%20professionals%20working%2C%20blurred%20in%20background%2C%20soft%20lighting%2C%20professional%20atmosphere%2C%20high-end%20office%20space&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"
+      ></div>
+      <div class="container mx-auto px-4 py-20 md:py-32 relative">
+        <div class="max-w-2xl">
+          <div class="flex items-center mb-6">
+            <h1 class="text-5xl font-['Pacifico'] text-[#8B4513] mr-3">MAYA</h1>
+            <span class="text-xl font-medium text-gray-800"
+              >Business & Finance</span
+            >
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Empowering Growth Through Financial Wisdom
+          </h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Expert business and financial consulting services aimed at
+            empowering organizations and entrepreneurs toward sustainable
+            success.
+          </p>
+          <button
+          class="bg-primary hover:bg-primary/90 text-gray-900 font-semibold px-8 py-3 rounded-button shadow-lg transition duration-300 whitespace-nowrap"
+          onclick="document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });"
+        >
+          Book a Consultation
+        </button>
+        
+        </div>
+      </div>
+    </section>
+    <!-- Vision & Mission Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+          About MAYA Consultancy
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-white p-8 rounded shadow-lg hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-eye-line ri-xl text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+            <p class="text-gray-700">
+              To be the guiding light that empowers businesses across Ethiopia
+              and beyond, fostering financial literacy, operational excellence,
+              and sustainable growth practices that contribute to economic
+              development and prosperity.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded shadow-lg hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-flag-line ri-xl text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <p class="text-gray-700">
+              To inspire growth, drive excellence, and create sustainable
+              success for every business we serve through innovative financial
+              strategies, personalized consulting solutions, and unwavering
+              commitment to our clients' vision and goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Core Values Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+          Our Core Values
+        </h2>
+        <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          These principles guide our approach to every client engagement and
+          shape our organizational culture.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 border-t-4 border-primary"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-shield-check-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Integrity & Ethics
+            </h3>
+            <p class="text-gray-700">
+              We uphold the highest standards of honesty, transparency, and
+              ethical conduct in all our client relationships and business
+              practices.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 border-t-4 border-primary"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-user-heart-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Client-Centric Approach
+            </h3>
+            <p class="text-gray-700">
+              We place our clients' needs at the center of everything we do,
+              tailoring our solutions to address their unique challenges and
+              objectives.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 border-t-4 border-primary"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-refresh-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Adaptability</h3>
+            <p class="text-gray-700">
+              We embrace change and continuously evolve our approaches to meet
+              the dynamic needs of our clients in a rapidly changing business
+              environment.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 border-t-4 border-primary"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-award-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Excellence</h3>
+            <p class="text-gray-700">
+              We strive for excellence in all our services, consistently
+              delivering high-quality, impactful solutions that exceed client
+              expectations.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 border-t-4 border-primary"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-team-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Inclusivity & Diversity
+            </h3>
+            <p class="text-gray-700">
+              We value diverse perspectives and foster an inclusive environment
+              that respects and celebrates differences in thought, background,
+              and experience.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 border-t-4 border-primary"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-global-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Local Expertise
+            </h3>
+            <p class="text-gray-700">
+              We combine global best practices with deep understanding of the
+              Ethiopian business landscape to provide contextually relevant
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+          Our Services
+        </h2>
+        <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          Comprehensive business and financial consulting solutions tailored to
+          meet your organization's unique needs.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-building-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Organizational Restructuring
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              Strategic organizational redesign to optimize efficiency, improve
+              communication, and align structure with business objectives.
+            </p>
+           
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-file-list-3-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Manuals & Procedures
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              Development of comprehensive operational manuals, policies, and
+              procedures to standardize processes and ensure consistency.
+            </p>
+            
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-search-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Research & Analysis
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              In-depth market research, competitive analysis, and data-driven
+              insights to inform strategic decision-making and identify
+              opportunities.
+            </p>
+            
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-file-chart-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Business Plans</h3>
+            <p class="text-gray-700 flex-grow">
+              Comprehensive business plan development and feasibility studies to
+              validate concepts, secure funding, and chart a path to success.
+            </p>
+            
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-calculator-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Accounting Consultancy
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              Expert accounting support, financial statement preparation, system
+              implementation, and process optimization for improved financial
+              management.
+            </p>
+            
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-funds-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Financial Management
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              Comprehensive financial and risk management solutions including
+              budgeting, forecasting, investment analysis, and risk mitigation
+              strategies.
+            </p>
+            
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-user-settings-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Professional Coaching
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              Personalized mentorship and coaching programs for executives,
+              entrepreneurs, and management teams to enhance leadership
+              capabilities.
+            </p>
+            
+          </div>
+          <div
+            class="bg-white p-6 rounded shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="ri-graduation-cap-line ri-lg text-[#8B4513]"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Corporate Training
+            </h3>
+            <p class="text-gray-700 flex-grow">
+              Customized training programs covering financial literacy,
+              management skills, operational excellence, and other key business
+              competencies.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Company Goals Section -->
+    <section id="goals" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+          Our Strategic Goals
+        </h2>
+        <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          We are committed to achieving measurable outcomes that benefit our
+          clients and contribute to sustainable business practices.
+        </p>
+        <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+              >
+                <i class="ri-award-line ri-lg text-[#8B4513]"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Deliver Tangible Value
+                </h3>
+                <p class="text-gray-700">
+                  Provide measurable business improvements for our clients
+                  through actionable insights, strategic guidance, and practical
+                  solutions that directly impact their bottom line.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+              >
+                <i class="ri-customer-service-2-line ri-lg text-[#8B4513]"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Client Satisfaction
+                </h3>
+                <p class="text-gray-700">
+                  Maintain high levels of client satisfaction and retention by
+                  consistently exceeding expectations, building trust-based
+                  relationships, and delivering exceptional service quality.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+              >
+                <i class="ri-recycle-line ri-lg text-[#8B4513]"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Promote Sustainability
+                </h3>
+                <p class="text-gray-700">
+                  Advocate for and implement sustainable and ethical business
+                  practices that balance economic growth with social
+                  responsibility and environmental stewardship.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+              >
+                <i class="ri-funds-box-line ri-lg text-[#8B4513]"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Financial Sustainability
+                </h3>
+                <p class="text-gray-700">
+                  Achieve and maintain financial health and stability for our
+                  consultancy while providing value-driven services that are
+                  accessible to businesses of various sizes.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+              >
+                <i class="ri-bar-chart-grouped-line ri-lg text-[#8B4513]"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Measure Impact
+                </h3>
+                <p class="text-gray-700">
+                  Develop and implement robust metrics to track the impact of
+                  our services on client businesses, enabling continuous
+                  improvement and demonstrating our value proposition.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+          Get in Touch
+        </h2>
+        <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          Reach out to discuss how MAYA Business and Finance Consultancy can
+          help your organization achieve its goals.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <!-- Contact Information -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              Contact Information
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="ri-phone-line ri-lg text-[#8B4513]"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                    Phone
+                  </h4>
+                  <p class="text-gray-700">+251 911 891 158</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="ri-mail-line ri-lg text-[#8B4513]"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                    Email
+                  </h4>
+                  <p class="text-gray-700">tewabech.maya@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="ri-map-pin-line ri-lg text-[#8B4513]"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">
+                    Address
+                  </h4>
+                  <p class="text-gray-700">
+                    CMC Road, Gurd Shola<br />Mehir Building, 4th Floor<br />Addis
+                    Ababa, Ethiopia
+                  </p>
+                </div>
+              </div>
+              <div class="pt-4">
+                <h4 class="text-lg font-semibold text-gray-900 mb-4">
+                  Business Hours
+                </h4>
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <p class="font-medium text-gray-800">Monday - Friday</p>
+                    <p class="text-gray-700">8:30 AM - 5:30 PM</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Saturday</p>
+                    <p class="text-gray-700">9:00 AM - 1:00 PM</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Sunday</p>
+                    <p class="text-gray-700">Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Form -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              Send Us a Message
+            </h3>
+            <form id="contact-form" action="https://formsubmit.co/tewabech.maya@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="box" />
+              <input type="hidden" name="_next" value="https://formsubmit.co/thanks.html" />            
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your full name"
+                  name="Full Name"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your email address"
+                  name="Email Address"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="phone" class="block text-gray-700 font-medium mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your phone number"
+                  name="Phone Number"
+                  value="+251"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Message subject"
+                  name="Subject"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="Message"
+                  rows="5"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-primary/90 text-gray-900 font-semibold px-6 py-3 !rounded-button shadow-md transition duration-300 whitespace-nowrap"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Booking System Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+          Book a Consultation
+        </h2>
+        <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          Schedule a meeting with our expert consultants to discuss your
+          business needs and explore how we can help you achieve your goals.
+        </p>
+        <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+          <form id="booking-form" action="https://formsubmit.co/tewabech.maya@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_next" value="https://formsubmit.co/thanks.html" />          
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  Personal Information
+                </h3>
+                <div class="mb-4">
+                  <label
+                    for="booking-name"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="booking-name"
+                    name="Full Name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="booking-email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="booking-email"
+                    name="Email Address"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your email address"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="booking-phone"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="booking-phone"
+                    name="Phone Number"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your phone number"
+                    value="+251"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="company-name"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    id="company-name"
+                    name="Company Name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  Consultation Details
+                </h3>
+                <div class="mb-4">
+                  <label
+                    for="service-type"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Service Type</label
+                  >
+                  <div class="relative">
+                    <select
+                      id="service-type"
+                      class="w-full appearance-none px-4 py-2 pr-8 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white"
+                    >
+                      <option value="" disabled selected>
+                        Select a service
+                      </option>
+                      <option value="organizational-restructuring">
+                        Organizational Restructuring
+                      </option>
+                      <option value="manuals-procedures">
+                        Manuals & Procedures
+                      </option>
+                      <option value="research-analysis">
+                        Research & Analysis
+                      </option>
+                      <option value="business-plans">Business Plans</option>
+                      <option value="accounting-consultancy">
+                        Accounting Consultancy
+                      </option>
+                      <option value="financial-management">
+                        Financial Management
+                      </option>
+                      <option value="professional-coaching">
+                        Professional Coaching
+                      </option>
+                      <option value="corporate-training">
+                        Corporate Training
+                      </option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div
+                      class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                    >
+                      <i class="ri-arrow-down-s-line ri-lg text-gray-500"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="consultation-date"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Preferred Date</label
+                  >
+                  <input
+                    type="date"
+                    id="consultation-date"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    min="2025-07-03"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="consultation-time"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Preferred Time</label
+                  >
+                  <div class="relative">
+                    <select
+                      id="consultation-time"
+                      class="w-full appearance-none px-4 py-2 pr-8 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white"
+                      required
+                    >
+                      <option value="" disabled selected>Select a time</option>
+                      <option value="09:00">9:00 AM</option>
+                      <option value="10:00">10:00 AM</option>
+                      <option value="11:00">11:00 AM</option>
+                      <option value="12:00">12:00 PM</option>
+                      <option value="14:00">2:00 PM</option>
+                      <option value="15:00">3:00 PM</option>
+                      <option value="16:00">4:00 PM</option>
+                    </select>
+                    <div
+                      class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                    >
+                      <i class="ri-arrow-down-s-line ri-lg text-gray-500"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="consultation-notes"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Additional Notes</label
+                  >
+                  <textarea
+                    id="consultation-notes"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Please provide any additional information about your consultation needs"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6">
+              <label class="flex items-center">
+                <div class="custom-checkbox">
+                  <input type="checkbox" required />
+                  <span class="checkmark"></span>
+                </div>
+                <span class="text-gray-700"
+                  >I agree to the processing of my personal data in accordance
+                  with the privacy policy</span
+                >
+              </label>
+            </div>
+            <div class="mt-8">
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-primary/90 text-gray-900 font-semibold px-6 py-3 !rounded-button shadow-md transition duration-300 whitespace-nowrap"
+              >
+                Book Consultation
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="flex items-center mb-6 md:mb-0">
+            <h2 class="text-3xl font-['Pacifico'] text-primary mr-2">MAYA</h2>
+            <span class="text-sm font-medium text-gray-300"
+              >Business & Finance Consultancy</span
+            >
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+              <div class="space-y-3">
+                <p class="flex items-center">
+                  <i class="ri-map-pin-line ri-lg mr-3 text-primary"></i>
+                  <span
+                    >CMC Road, Gurd Shola<br />Mehir Building, 4th Floor<br />Addis
+                    Ababa, Ethiopia</span
+                  >
+                </p>
+                <p class="flex items-center">
+                  <i class="ri-phone-line ri-lg mr-3 text-primary"></i>
+                  <span>+251 911 891 158</span>
+                </p>
+                <p class="flex items-center">
+                  <i class="ri-mail-line ri-lg mr-3 text-primary"></i>
+                  <span>tewabech.maya@gmail.com</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#home"
+                    class="hover:text-primary transition duration-300"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="hover:text-primary transition duration-300"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="hover:text-primary transition duration-300"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#goals"
+                    class="hover:text-primary transition duration-300"
+                    >Our Goals</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="hover:text-primary transition duration-300"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Business Hours</h3>
+              <ul class="space-y-2">
+                <li class="flex justify-between">
+                  <span>Monday - Friday:</span>
+                  <span>8:30 AM - 5:30 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Saturday:</span>
+                  <span>9:00 AM - 1:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Sunday:</span>
+                  <span>Closed</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2025 MAYA Business and Finance Consultancy. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script id="navigation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        // Mobile menu toggle
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+        // Smooth scroll function
+        function smoothScroll(target) {
+          const element = document.querySelector(target);
+          if (element) {
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        }
+        // Handle navigation links
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = this.getAttribute("href");
+            smoothScroll(target);
+          });
+        });
+        // Handle mobile menu links
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            mobileMenu.classList.add("hidden");
+            const target = this.getAttribute("href");
+            smoothScroll(target);
+          });
+        });
+      });
+    </script>
+    <script id="form-handling-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+        const bookingForm = document.getElementById("booking-form");
+        function showNotification(message) {
+          const notification = document.createElement("div");
+          notification.className =
+            "fixed top-4 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-lg z-50";
+          notification.innerHTML = `
+          <div class="flex items-center">
+            <i class="ri-checkbox-circle-line ri-lg mr-2"></i>
+            <p>${message}</p>
+          </div>
+        `;
+          document.body.appendChild(notification);
+          setTimeout(() => notification.remove(), 5000);
+        }
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = "Sending...";
+            submitButton.disabled = true;
+            const formData = new FormData(contactForm);
+            formData.append("to_email", "tewabech.maya@gmail.com");
+            formData.append("subject", "New Contact Form Submission");
+            fetch("https://formsubmit.co/tewabech.maya@gmail.com", {
+  method: "POST",
+  body: formData,
+})
+
+              .then((response) => {
+                if (response.ok) {
+                  showNotification(
+                    "Thank you for your message! We will get back to you soon.",
+                  );
+                  contactForm.reset();
+                } else {
+                  throw new Error("Failed to send message");
+                }
+              })
+              .catch((error) => {
+                showNotification("Failed to send message. Please try again later.");
+              })
+              .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+              });
+          });
+        }
+        if (bookingForm) {
+          bookingForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const submitButton = bookingForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = "Processing...";
+            submitButton.disabled = true;
+            const formData = new FormData(bookingForm);
+            formData.append("to_email", "tewabech.maya@gmail.com");
+            formData.append("subject", "New Consultation Booking Request");
+            fetch("https://formsubmit.co/tewabech.maya@gmail.com", {
+  method: "POST",
+  body: formData,
+})
+
+              .then((response) => {
+                if (response.ok) {
+                  showNotification(
+                    "Your consultation has been booked successfully! We will confirm your appointment via email.",
+                  );
+                  bookingForm.reset();
+                } else {
+                  throw new Error("Failed to book consultation");
+                }
+              })
+              .catch((error) => {
+                showNotification(
+                  "Failed to book consultation. Please try again later.",
+                );
+              })
+              .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+              });
+          });
+        }
+      });
+    </script>
+    <script id="date-validation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const dateInput = document.getElementById("consultation-date");
+        if (dateInput) {
+          // Set minimum date to tomorrow
+          const tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          const formattedDate = tomorrow.toISOString().split("T")[0];
+          dateInput.setAttribute("min", formattedDate);
+          // Set default date to tomorrow
+          dateInput.value = formattedDate;
+        }
+      });
+    </script>
+  </body>
+</html>
